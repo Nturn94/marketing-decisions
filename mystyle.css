@@ -51,7 +51,7 @@ html {
 #hero {
   position: relative;
   width: 100%; /* Full width without overflow */
-  height: 65vh; /* Full viewport height */
+  height: 55vh; /* Full viewport height */
   overflow: visible; /* Ensures no overflow from children */
   background-image: url("hero_pic.png"); /* Set your background image */
   background-size: cover;
