@@ -1,0 +1,150 @@
+body {
+}
+
+html {
+}
+
+#banner {
+  position: sticky;
+  background-color: #1a2f43;
+
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 1000; /* Keeps it above other content */
+  width: 100%; /* Full width of the screen */
+  padding: 10px 0; /* Adds padding to make it look cleaner */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.829); /* Optional shadow for separation */
+  padding-top: 20px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+#banner .row {
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+#logo {
+  max-width: 75%;
+  max-height: 75%;
+  margin-left: 5%;
+}
+
+#nav-links {
+  color: white;
+  margin-right: 0%;
+
+  a {
+    margin: 1%;
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+  a:hover {
+    color: lightgray;
+  }
+}
+
+#hero {
+  position: relative;
+  width: 100%; /* Full width without overflow */
+  height: 65vh; /* Full viewport height */
+  overflow: visible; /* Ensures no overflow from children */
+  background-image: url("hero_pic.png"); /* Set your background image */
+  background-size: cover;
+  background-position: center;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width without overflow */
+  height: 100%; /* Full height of the hero container */
+  background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+  z-index: 1; /* Places overlay behind the text content */
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  margin-left: 10%;
+  padding-top: 5%;
+  z-index: 2; /* Ensures content appears above overlay */
+}
+
+.wave-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Keeps it behind the text */
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, 0); /* 50% transparent gray */
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: wave-animation 6s infinite linear;
+  z-index: 1;
+}
+
+.wave:nth-child(2) {
+  left: 99.95%; /* Slightly overlaps the first wave to eliminate the line */
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.hero-text-block {
+  position: relative; /* Position it within document flow */
+  display: block;
+  background-color: #274a6b;
+  color: white;
+  z-index: 5; /* Higher z-index to appear above wave */
+  padding: 20px;
+  margin-top: -200px; /* Pull up to overlap the wave slightly */
+  padding-bottom: 3%;
+}
+
+.hero-text-block-text {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
+.footer-banner {
+  background-color: #1a2f43;
+}
+
+.footer-banner-content {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.footer-banner .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer-banner-content .row {
+  margin-left: 0;
+  margin-right: 0;
+}
